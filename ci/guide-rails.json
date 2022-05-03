@@ -4,7 +4,7 @@
 	},
 	"application": {
 		"name": "simple-webapp",
-		"language": "JAVA_MAVEN",
+		"language": "JAVA",
 		"artifact_store": {
 			"repositories": null
 		}
