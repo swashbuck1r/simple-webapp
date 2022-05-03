@@ -43,10 +43,7 @@
 								"properties": null
 							}
 						],
-						"docker_options": {
-							"docker_registry_alias_id": "b7538d0f-4373-4d39-7300-76e6642699b1",
-							"repository": "dockerhub-proxy/library/openjdk:11"
-						}
+						"docker_options": {}
 					}
 				]
 			}
