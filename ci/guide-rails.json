@@ -84,7 +84,14 @@
 				]
 			}
 		],
-		"exit_actions": {},
+		"exit_actions": {
+			"default": {
+				"code_analysis": {
+					"publish": true,
+					"properties": null
+				}
+			}
+		},
 		"default_properties": [],
 		"deployment_files": [],
 		"application_init": {}
