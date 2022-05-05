@@ -75,7 +75,7 @@
 							{
 								"name": "copy-jar",
 								"definition": "Copy final JAR to expected location",
-								"command": "cp -f target/*.[jwe]ar **/target/*.[jwe]ar .",
+								"command": "cp -f target/*.[jwe]ar .",
 								"properties": null
 							}
 						],
