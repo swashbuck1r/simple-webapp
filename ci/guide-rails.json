@@ -61,15 +61,21 @@
 						"name": "maven-build",
 						"steps": [
 							{
+								"name": "compile",
+								"definition": "compile",
+								"command": "mvn compile",
+								"properties": null
+							},
+							{
 								"name": "build",
 								"definition": "build",
-								"command": "./gradlew build",
+								"command": "mvn package",
 								"properties": null
 							},
 							{
 								"name": "copy-jar",
 								"definition": "Copy final JAR to expected location",
-								"command": "cp -f build/libs/*.[jwe]ar .",
+								"command": "cp -f target/*.[jwe]ar **/target/*.[jwe]ar .",
 								"properties": null
 							}
 						],
