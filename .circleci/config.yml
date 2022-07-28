@@ -20,7 +20,6 @@ jobs:
     steps:
       - run: echo "CircleCI Workflow ending."
   maven_package:
-    jobs:
       - maven/test:
           command: 'package' 
 workflows:
