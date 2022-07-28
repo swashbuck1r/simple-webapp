@@ -1,0 +1,34 @@
+# Java Gradle CircleCI 2.1 configuration file
+version: 2.1
+description: |
+    Build and test a simple Java project using Gradle.
+display:
+    home_url: https://github.com/swashbuck1r/simple-webapp
+    source_url: https://github.com/swashbuck1r/simple-webapp
+orbs:
+  maven: circleci/maven@1.3.0
+jobs:
+  say_workflow_starting:
+    docker:
+      - image: cimg/openjdk:15.0
+    steps:
+      - run: echo "CircleCI Workflow starting"
+      - run: java --version
+      - run: gradle -v
+  say_workflow_ending:
+    docker:
+      - image: cimg/openjdk:15.0
+    steps:
+      - run: echo "CircleCI Workflow ending."
+  maven_package:
+    jobs:
+      - maven/test:
+          command: '-X package' 
+workflows:
+    # Build and test a simple Java project using Maven.
+  run_jobs:
+    # List of jobs that will run
+    jobs:
+      - say_workflow_starting
+      - maven_package  
+      - say_workflow_ending
