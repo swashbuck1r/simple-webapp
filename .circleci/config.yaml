@@ -14,7 +14,6 @@ jobs:
     steps:
       - run: echo "CircleCI Workflow starting"
       - run: java --version
-      - run: gradle -v
   say_workflow_ending:
     docker:
       - image: cimg/openjdk:15.0
@@ -23,7 +22,7 @@ jobs:
   maven_package:
     jobs:
       - maven/test:
-          command: '-X package' 
+          command: 'package' 
 workflows:
     # Build and test a simple Java project using Maven.
   run_jobs:
